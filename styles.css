@@ -108,18 +108,18 @@ nav a:hover::after {
 /* BUTTONS */
 .btn-glow, .back-home {
   background: transparent;
-  border: 2px solid #7fdbff9e;
+  border: 2px solid #ffcc7f9e;
   color: #cbc405;
   padding: 0.75rem 2rem;
   font-size: 1.2rem;
   border-radius: 5px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px #ffea00, 0 0 20px #7fdbff61 inset;
+  box-shadow: 0 0 10px #ffae00, 0 0 20px #ff7f7f61 inset;
 }
 
 .btn-glow:hover, .back-home:hover {
-  background: #7FDBFF;
+  background: #ff8c00;
   color: #000;
   box-shadow: 0 0 20px #7FDBFF, 0 0 30px #7FDBFF inset;
 }
