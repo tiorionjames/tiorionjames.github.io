@@ -17,7 +17,7 @@ html, body {
 /* Cosmic Background */
 body.cosmic-background {
   background: radial-gradient(circle at center, #1e1b29, #0d0a14 80%);
-  background-image: url('/assets/images/cosmic_background.jpg');
+  background-image: url('/cosmic_background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
