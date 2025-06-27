@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Orion Rising</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="/favicon.ico" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body class="cosmic-background">
-
   <header class="header">
-      <nav>
-     <a href="index.html">Home</a>
+    <nav>
+      <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-<canvas id="nebula"></canvas>
-<canvas id="starfield"></canvas>
-  <main class="main-content">
-  <div class="hero">
-    <img src="/orion_logo.png" alt="Orion Rising Logo" class="logo">
-    <img src="/Tiberius_James.jpg" alt="Tiberius James" class="logo" />
 
+  <canvas id="nebula"></canvas>
+  <canvas id="starfield"></canvas>
 
-  <main class="about-main">
-    <h1>About Tiberius James</h1> <br><br>
+  <main class="main-content about-main">
+    <section class="hero">
+      <img src="/orion_logo.png" alt="Orion Rising Logo" class="logo">
+      <img src="/Tiberius_James.jpg" alt="Tiberius James Portrait" class="logo">
+    </section>
 
-    <p> I am a software engineer.  I got my start in tech back in 2008 where I started out as tech support for a local cable internet company.  After I earned my Associates at Vatterott College in Computer Systems, I set out to learn my craft.  From hardware troubleshooting to software installs, I wore many hats: Computer Technician, Network Administrator, Technician, Team Lead, Fixer-of-many-things.  </p>
+    <section>
+      <h1>About Tiberius James</h1>
+      <p>I am a software engineer. I got my start in tech back in 2008 as tech support for a local cable internet company. After earning my Associate's at Vatterott College in Computer Systems, I began honing my craft. From hardware troubleshooting to software installs, I wore many hats: Computer Technician, Network Administrator, Team Lead, and Fixer-of-Many-Things.</p>
 
-      <p> I then transitioned to the world of Customer Service in the Insurance, and Banking industries because soft skills are important when complicated information needs to be broken down into terms that anyone can understand.  In 2016, I went back to college at Colorado State University - Global to pursue my Bachelor's Degree.  Although a different path was taken with the BS in Criminal Justice, I learned many skills which translate to software development including communication, critical thinking, ethics, and analysis.  Later, in 2025 I enrolled at Hack Reactor's Beginner's Bootcamp for Software Engineering. </p>
+      <p>I later transitioned into customer service roles in the insurance and banking industries—because soft skills are essential when complex information needs to be communicated clearly. In 2016, I returned to college at Colorado State University - Global to pursue a Bachelor's degree. Though I earned a B.S. in Criminal Justice, I developed valuable skills applicable to software development: communication, critical thinking, ethics, and analysis.</p>
 
-       <p> I've learned backend programming languages such as Python, PostgreSQL, and FastAPI.  With frontend I learned JavaScript, React, HTML/CSS, and DOM Manipulation.  Some software engineering technologies and developments include: Debugging, Troubleshooting, Code Review, Pair
-Programming, Agile Development, and Object Oriented Programming.  Lastly, DevOps and Platforms: Git, Docker, Google Docs, and Microsoft Office. </p> <br>
+      <p>In 2025, I enrolled at Hack Reactor's Beginner’s Bootcamp for Software Engineering. I’ve since gained experience in backend languages like Python, PostgreSQL, and FastAPI, as well as frontend tools like JavaScript, React, HTML/CSS, and DOM manipulation.</p>
 
-<br>
-*Key Projects <p>
+      <p>Additional proficiencies include debugging, troubleshooting, code review, pair programming, Agile development, object-oriented programming, version control with Git, Docker, and using productivity tools like Google Docs and Microsoft Office.</p>
+    </section>
 
-<!-- - **AI Assistant: Answers questions with wit and accuracy. <p> -->
-- **BarterBuddy: A small social media web app designed to bring people together in the free exchange of knowledge. <p> <br> <br>
-- **DewList: A task manager built from scratch in FastAPI & React. <p> <br> <br>
+    <section>
+      <h2>Key Projects</h2>
+      <ul>
+        <li><strong>BarterBuddy:</strong> A small social media web app designed to bring people together in the free exchange of knowledge.</li>
+        <li><strong>DewList:</strong> A task manager built from scratch using FastAPI and React.</li>
+        <!-- Future project? -->
+        <!-- <li><strong>AI Assistant:</strong> Answers questions with wit and accuracy.</li> -->
+      </ul>
+    </section>
 
-
-🖖 What’s Next
-I’m just getting started—let’s build something great together! [Contact Me]
- <br>
-<script src="starfield.js"></script>
-<script src="nebula.js"></script>
-
+    <section>
+      <h2>🖖 What’s Next?</h2>
+      <p>I’m just getting started—let’s build something great together! <a href="contact.html">Contact Me</a>.</p>
+    </section>
   </main>
 
-
   <footer class="footer">
-   <p class="forged">Forged by Order of the Dev ✨</p>
+    <p class="forged">Forged by Order of the Dev ✨</p>
     <p>© 2025 Tiberius Orion James. All rights reserved.</p>
   </footer>
+
+  <script src="starfield.js"></script>
+  <script src="nebula.js"></script>
 </body>
 </html>

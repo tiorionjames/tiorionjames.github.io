@@ -347,3 +347,36 @@ body {
     bottom: 100%;
   }
 }
+
+.about-main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+.about-main h1,
+.about-main h2 {
+  font-family: 'Noto Serif Georgian', serif;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.about-main ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 200px;
+  border-radius: 10px;
+}
