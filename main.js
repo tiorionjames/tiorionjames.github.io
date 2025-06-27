@@ -2,11 +2,11 @@ const messages = [
   `
     <div class="title-block">
       <p class="subtitle">My Portfolio</p>
-      <h1 class="title-main">Orion Rising</h1>
+      <h1 class="title-main">By: Tiberius James</h1>
     </div>
     <div class="body-block">
       <p class="crawl-paragraph">My name is Tiberius James and I am a software engineer based out of West Des Moines, Iowa. I love creating and learning new things!</p>
-      <p class="crawl-paragraph">Everything shown here on this site was developed and coded by me, with some assistance from a group of developers that I worked with while attending the Hack Reactor Bootcamp.</p>
+      <p class="crawl-paragraph">Everything shown here on this site was developed and coded by me, with some assistance from a group of developers that I worked with while attending the Hack Reactor Bootcamp.  Their contributions are noted in the projects area.</p>
 
       <p class="crawl-paragraph">I have over 630 hours completed in Advanced Software Engineering from Hack Reactor Bootcamp. I am proficient in Python, PostgreSQL, HTML/CSS, JavaScript, React, FastAPI, Agile Development, Object Oriented Programming, Git, and DOM Manipulation.</p>
       <p class="crawl-paragraph">See my Contact Me page for more information!</p>
