@@ -1,47 +1,49 @@
-/* RESET */
+/* === RESET & BASE === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base */
 html, body {
   width: 100%;
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  color: #fff;
+  color: #f0f0f0;
+  background-color: #0d0a14;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
-/* Cosmic Background */
-body.cosmic-background {
-  background: radial-gradient(circle at center, #1e1b29, #0d0a14 80%);
-  background-image: url('/cosmic_background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-/* NAVIGATION */
-.header {
+/* === LAYOUT === */
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.5);
 }
 
+.main-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+}
+
+.header, .footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+}
+
+/* === NAVIGATION === */
 nav {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 nav a {
+  margin: 0 1rem;
   color: #fff;
-  margin-left: 2rem;
+  font-size: 1.1rem;
   text-decoration: none;
-  font-size: 1.2rem;
   position: relative;
 }
 
@@ -51,138 +53,97 @@ nav a::after {
   height: 2px;
   background: #7FDBFF;
   transform: scaleX(0);
-  transform-origin: left;
   transition: transform 0.3s ease;
+  transform-origin: left;
 }
 
 nav a:hover::after {
   transform: scaleX(1);
 }
 
-/* LOGO */
-.logo {
-  width: 200px;
-  height: auto;
-  margin-bottom: 2rem;
-}
-
-.logo-404 {
-  width: 180px;
-  height: auto;
-  margin-bottom: 30px;
-}
-
-/* MAIN CONTENT */
-.main-content, .container {
-  flex: 1;
+/* === LOGO & HERO === */
+.hero {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
   text-align: center;
-  padding: 2rem;
-  animation: fadeIn .5s ease;
 }
 
-.main-title {
-  font-size: 3rem;
+.logo {
+  max-width: 180px;
+  border-radius: 10px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3 {
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+}
+
+p {
   margin-bottom: 1rem;
 }
 
-.sub-title {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  font-style: italic;
-  color: #7FDBFF;
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
 }
 
+/* === PROJECTS === */
 .projects-list ul {
-  list-style: none;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .projects-list li {
-  margin: 1rem 0;
-  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
-/* BUTTONS */
-.btn-glow, .back-home {
+.project-link {
+  font-weight: bold;
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* === BUTTONS === */
+.btn-glow {
   background: transparent;
-  border: 2px solid #ffcc7f9e;
-  color: #cbc405;
+  border: 2px solid #ffc;
+  color: #ffc;
   padding: 0.75rem 2rem;
-  font-size: 1.2rem;
-  border-radius: 5px;
+  font-size: 1.1rem;
+  border-radius: 6px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px #ffae00, 0 0 20px #ff7f7f61 inset;
+  display: inline-block;
+  box-shadow: 0 0 10px #ffc, 0 0 20px #ff8c00 inset;
 }
 
-.btn-glow:hover, .back-home:hover {
+.btn-glow:hover {
   background: #ff8c00;
   color: #000;
   box-shadow: 0 0 20px #7FDBFF, 0 0 30px #7FDBFF inset;
 }
 
-.back-home {
-  margin-top: 2rem;
-}
-
-/* FOOTER */
-.footer {
-  width: 100%;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-size: 0.9rem;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
-}
-
-/* CONTACT PAGE */
-@import "https://fonts.googleapis.com/css2?family=Lato";
-.contact-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: 'Lato', sans-serif;
-  color: #fff;
-  text-align: center;
-}
-
-.contact-info p,
-.contact-info a {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #f0f0f0;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
+/* === FORMS === */
 form input,
 form textarea {
   width: 100%;
   max-width: 600px;
-  margin: 0.5rem auto;
+  margin: 0.5rem 0;
   padding: 0.75rem;
-  font-size: 1rem;
   border-radius: 5px;
   border: none;
-  display: block;
-}
-
-.form-buttons {
-  margin-top: 1rem;
 }
 
 .formBtn {
-  margin: 0.5rem;
   padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
   font-weight: bold;
   cursor: pointer;
   background-color: #1e90ff;
@@ -196,133 +157,35 @@ form textarea {
   background-color: #0077cc;
 }
 
-
-/* 404 PAGE SPECIFIC */
-#starfield, #nebula {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-#starfield {
-  z-index: -1;
-}
-
-#nebula {
-  z-index: -2;
-}
-
-body.no-scroll {
-  overflow: hidden;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-
-}
-
-.project-link {
-  font-weight: bold;
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-.project-link:hover {
-  color: #104e8b;
-}
-body {
-  width: 100%;
-  height: 100%;
-  background: #00000000;
-  overflow: hidden;
-}
-
-
-
+/* === STAR WARS CRAWL === */
 .star-wars {
-  display: flex;
-  justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 40vh;
   overflow: hidden;
-  font-family: 'Lato', sans-serif;
-  color: #bfb600;
-  text-align: center;
-}
-
-.crawl {
-  position: relative;
-  transform-origin: 50% 100%;
-  animation: crawl 30s linear forwards;
-  background: linear-gradient(to bottom, rgb(238, 125, 0), rgb(255, 255, 0));
-  font-family: 'Lato', sans-serif;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  opacity: 1 !important;
-  transition: none !important;
-}
-
-
-
-/* Tighter spacing between subtitle and title */
-.crawl .subtitle {
-  margin: 0.25rem 0;
-  font-size: 110%;
-  line-height: 1.2;
-  text-align: center;
-}
-
-/* Title styling */
-.crawl .title-main {
-  font-size: 100%;
-  margin: 0.25rem 0 1.5rem; /* extra bottom space to separate from body */
-  line-height: 1.2;
-  text-align: center;
-}
-
-/* Body block spacing */
-.crawl .body-block {
-  margin-top: 0.25rem 0 1.5rem;
-}
-
-/* Paragraph tweaks */
-.crawl .crawl-paragraph {
-  margin: 0.5rem 0;
-  font-size: 100%;
-  margin: 0.25rem 0 1.5rem;
-  line-height: 1.2; /* Tighter spacing than global 1.6 */
-  text-align: center;
-}
-
-.crawl > .title {
-  font-size: 100%;
-  text-align: center;
-}
-
-.crawl > .title h1 {
-  margin: 0 0 100px;
+  perspective: 400px;
+  color: #ffe81f;
   text-align: center;
 }
 
 .crawl-wrapper {
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  animation: crawl 60s linear infinite;
+}
+
+.crawl {
+  transform: rotateX(20deg);
+  font-size: 1.2rem;
+  width: 60%;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.crawl-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 @keyframes crawl {
@@ -334,35 +197,23 @@ body {
   }
 }
 
-.about-main {
-  padding: 2rem;
-  max-width: 960px;
-  margin: 0 auto;
-  color: #f4f4f4;
-  line-height: 1.6;
+/* === FOOTER === */
+.footer p {
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
-.about-main h1,
-.about-main h2 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  margin-top: 2rem;
+/* === UTILITY === */
+.fade {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 2;
 }
 
-.about-main ul {
-  padding-left: 1.5rem;
-  list-style-type: disc;
-}
-
-.hero {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.logo {
-  max-width: 200px;
-  border-radius: 10px;
+.intro {
+  text-align: center;
+  margin: 2rem 0;
 }

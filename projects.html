@@ -5,61 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Orion Rising</title>
   <link rel="stylesheet" href="styles.css" />
-
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body class="cosmic-background">
 
   <header class="header">
     <nav>
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-<canvas id="nebula"></canvas>
-<canvas id="starfield"></canvas>
-  <main class="main-content"><p>
-    <div class="hero">
-    <img src="/orion_logo.png" alt="Orion Rising Logo" class="logo"><br>
-    <img src="/Tiberius_James.jpg" alt="Tiberius James" class="logo" />
-    <h1>Coming Soon:</h1> <br>
 
-    <ul class="hero">
-      <li>
-           <strong>Barter Buddy</strong> — a small social media platform to connect users to exchange knowledge and skills.
-      </li>
-        <strong>DewList</strong> — Task management, streamlined.
-      </li>
-      <li>
+  <canvas id="nebula"></canvas>
+  <canvas id="starfield"></canvas>
 
-    </ul><br><br>
-
-    <section class="projects-list">
-      <h2>Completed Projects:</h2>
+  <main class="main-content">
+    <section class="hero">
+      <img src="/orion_logo.png" alt="Orion Rising Logo" class="logo" />
+      <img src="/Tiberius_James.jpg" alt="Tiberius James Portrait" class="logo" />
+      <h1>Coming Soon:</h1>
       <ul>
-      <li><a href="https://github.com/tiorionjames/sarcasticast/" class="project-link">
-      SarcastiCast: A simple web app that tells you your local weather, with a little bit of sass!
-    </a></li>
-        <li><a href="https://github.com/tiorionjames/fsf-4-blog-app/" class="project-link">
-      Basic Blog App: A web based blog app which allows users to post and edit a blog
-    </a></li>
-      <li><a href="https://github.com/tiorionjames/" class="project-link">
-      See My GitHub Repository!
-    </a></li>
-      More coming soon!
-     </a></li>
-        <!-- add more as they hatch from the nebula! -->
+        <li><strong>Barter Buddy</strong> — A small social media platform to connect users for skill-sharing.</li>
+        <li><strong>DewList</strong> — A task manager focused on simplicity and productivity.</li>
       </ul>
     </section>
 
-    <p class="note">Stay tuned. Great things are in the making.</p>
+    <section class="projects-list">
+      <h2>Completed Projects</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/tiorionjames/sarcasticast/" class="project-link" target="_blank" rel="noopener noreferrer">
+            <strong>SarcastiCast</strong>: A snarky weather app that delivers your local forecast with a dose of attitude.
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/tiorionjames/fsf-4-blog-app/" class="project-link" target="_blank" rel="noopener noreferrer">
+            <strong>Basic Blog App</strong>: A simple blogging platform where users can post and edit content.
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/tiorionjames/" class="project-link" target="_blank" rel="noopener noreferrer">
+            View My GitHub Repository
+          </a>
+        </li>
+      </ul>
+    </section>
 
-<script src="starfield.js"></script>
-<script src="nebula.js"></script>
+    <p class="note">Stay tuned—great things are in the making.</p>
+
+    <script src="starfield.js"></script>
+    <script src="nebula.js"></script>
   </main>
 
   <footer class="footer">
