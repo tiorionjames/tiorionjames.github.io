@@ -9,41 +9,36 @@ html, body {
   width: 100%;
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
+  font-size: 16px;
   color: #f0f0f0;
-  background-color: #0d0a14;
   overflow-x: hidden;
+  background-color: #0d0a14;
   line-height: 1.6;
 }
 
-/* === LAYOUT === */
-body {
-  display: flex;
-  flex-direction: column;
+body.cosmic-background {
+  background-image: url('/cosmic_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.main-content {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem;
-  flex: 1;
+body.no-scroll {
+  overflow: hidden;
 }
 
-.header, .footer {
+/* === HEADER & NAVIGATION === */
+.header {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 1rem;
-}
-
-/* === NAVIGATION === */
-nav {
-  margin-top: 0.5rem;
 }
 
 nav a {
-  margin: 0 1rem;
   color: #fff;
-  font-size: 1.1rem;
+  margin: 0 1rem;
   text-decoration: none;
+  font-size: 1.1rem;
   position: relative;
 }
 
@@ -53,8 +48,8 @@ nav a::after {
   height: 2px;
   background: #7FDBFF;
   transform: scaleX(0);
-  transition: transform 0.3s ease;
   transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 nav a:hover::after {
@@ -65,24 +60,32 @@ nav a:hover::after {
 .hero {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  gap: 2rem;
+  margin: 2rem auto;
   text-align: center;
 }
 
 .logo {
-  max-width: 180px;
-  border-radius: 10px;
+  max-width: 200px;
+  border-radius: 12px;
 }
 
-/* === TYPOGRAPHY === */
+/* === MAIN CONTENT === */
+.main-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 h1, h2, h3 {
   font-weight: 700;
-  margin: 1.5rem 0 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-p {
+p, li {
   margin-bottom: 1rem;
 }
 
@@ -91,19 +94,11 @@ ul {
   padding-left: 1.5rem;
 }
 
-/* === PROJECTS === */
-.projects-list ul {
-  margin-top: 1rem;
-}
-
-.projects-list li {
-  margin-bottom: 1rem;
-}
-
+/* === PROJECT LINKS === */
 .project-link {
-  font-weight: bold;
   color: #1e90ff;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .project-link:hover {
@@ -119,8 +114,8 @@ ul {
   font-size: 1.1rem;
   border-radius: 6px;
   text-decoration: none;
-  transition: all 0.3s ease;
   display: inline-block;
+  transition: all 0.3s ease;
   box-shadow: 0 0 10px #ffc, 0 0 20px #ff8c00 inset;
 }
 
@@ -139,6 +134,7 @@ form textarea {
   padding: 0.75rem;
   border-radius: 5px;
   border: none;
+  font-size: 1rem;
 }
 
 .formBtn {
@@ -157,6 +153,30 @@ form textarea {
   background-color: #0077cc;
 }
 
+/* === FOOTER === */
+.footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  color: #ccc;
+}
+
+/* === STARFIELD & NEBULA CANVAS === */
+#starfield,
+#nebula {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* === STAR WARS CRAWL === */
 .star-wars {
   position: relative;
@@ -165,6 +185,16 @@ form textarea {
   perspective: 400px;
   color: #ffe81f;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.fade {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 2;
 }
 
 .crawl-wrapper {
@@ -197,23 +227,37 @@ form textarea {
   }
 }
 
-/* === FOOTER === */
-.footer p {
-  font-size: 0.9rem;
-  color: #ccc;
+/* === PAGE-SPECIFIC === */
+.about-main,
+.contact-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* === UTILITY === */
-.fade {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10rem;
-  background: linear-gradient(to top, #000, transparent);
-  z-index: 2;
+.contact-info p,
+.contact-info a {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 .intro {
   text-align: center;
   margin: 2rem 0;
+}
+
+.projects-list ul {
+  margin-top: 1rem;
+}
+
+.projects-list li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
